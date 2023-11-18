@@ -28,9 +28,9 @@ pub struct Body {
 #[serde(default, rename_all = "PascalCase")]
 pub struct Cube {
     #[serde(rename = "@date")]
-    date: NaiveDate,
+    pub date: NaiveDate,
     #[serde(rename = "Rate")]
-    rates: Vec<Rate>,
+    pub rates: Vec<Rate>,
 }
 
 #[derive(Debug, PartialEq, Deserialize, Default)]
