@@ -1,0 +1,22 @@
+[package]
+name = "forex-nbr"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+[dependencies]
+anyhow = "1.0.75"
+reqwest = { version = "0.11.22", default-features = false, features = [
+    "rustls",
+    "rustls-tls",
+    "tokio-rustls",
+] }
+quick-xml = { version = "0.31.0", features = ["serialize"] }
+serde = { version = "1.0.192", features = ["derive"] }
+chrono = { version = "0.4.31", default-features = false, features = [
+    "serde",
+    "clock",
+] }
+
+[dev-dependencies]
+tokio = { version = "1.34.0", features = ["rt", "macros"] }
